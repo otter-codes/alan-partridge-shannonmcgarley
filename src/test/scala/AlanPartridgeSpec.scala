@@ -13,6 +13,13 @@ class AlanPartridgeSpec extends WordSpec with MustMatchers {
     "return 'Mine's a Pint!' when given a list of one AP term" in {
       AlanPartridge.partridge(List("PearTree")) mustEqual "Mine's a Pint!"
     }
+    "return 'Mine's a Pint!!' when given a list of two AP terms" in {
+      AlanPartridge.partridge(List("PearTree", "Dan")) mustEqual "Mine's a Pint!!"
+    }
+    "return 'Mine's a Pint!!!' when given a list of three AP terms and one non ap term" in {
+      AlanPartridge.partridge(List("PearTree", "Dan", "Chat", "Shannon")) mustEqual "Mine's a Pint!!!"
+    }
+
 
   }
 
